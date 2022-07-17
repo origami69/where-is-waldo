@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/where-is-waldo/static/css/main.a868df44.css",
-    "main.js": "/where-is-waldo/static/js/main.6bb92a2f.js",
+    "main.js": "/where-is-waldo/static/js/main.72df6e60.js",
     "static/js/787.0a5b87fa.chunk.js": "/where-is-waldo/static/js/787.0a5b87fa.chunk.js",
     "static/media/lnmh7c4kelr81.png": "/where-is-waldo/static/media/lnmh7c4kelr81.8fb2e2ae3824ccc6dfec.png",
     "static/media/unnamed.png": "/where-is-waldo/static/media/unnamed.c591cc22d48df6ff04a0.png",
@@ -9,11 +9,11 @@
     "static/media/151-1515288_flappy-bird-png-jpg-download-flappy-bird-bird.jpeg": "/where-is-waldo/static/media/151-1515288_flappy-bird-png-jpg-download-flappy-bird-bird.5c086bfbb3378fb41326.jpeg",
     "index.html": "/where-is-waldo/index.html",
     "main.a868df44.css.map": "/where-is-waldo/static/css/main.a868df44.css.map",
-    "main.6bb92a2f.js.map": "/where-is-waldo/static/js/main.6bb92a2f.js.map",
+    "main.72df6e60.js.map": "/where-is-waldo/static/js/main.72df6e60.js.map",
     "787.0a5b87fa.chunk.js.map": "/where-is-waldo/static/js/787.0a5b87fa.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a868df44.css",
-    "static/js/main.6bb92a2f.js"
+    "static/js/main.72df6e60.js"
   ]
 }
