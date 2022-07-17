@@ -29,7 +29,7 @@ useEffect(()=>{
 },[])
     return (
         <div className="container">
-              <h3 className="tits">The LeaderBoards</h3>
+              <h3 className="tits">The Top 10 LeaderBoards</h3>
             <div className="container2">
             <div className="blowNut">
             {getTimes.map(object=>{

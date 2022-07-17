@@ -29,7 +29,7 @@ const Game= () => {
     }, [running]);
 
 
-const handleSave= async ()=>{
+const handleSave= async (e)=>{
 let userInput=document.querySelector('.userName').value
 if(!(userInput>10)&& !(userInput<3) && userInput !==''&& !(/^[A-Za-z0-9 -]*$/.test(userInput)===true)){
     return alert('please dont leave blank and use 3-10 words/numbers')
@@ -49,12 +49,12 @@ const felt= docRem.data()
                 let feltArr=felt.user
                 const newFelt= feltArr.slice(0,n)
                 newFelt.push(userInput)
-                const feltTwo= feltArr.slice(n,(feltArr.length-1))
+                const feltTwo= feltArr.slice(n,(felt.user.length))
                 let thirdFelt= newFelt.concat(feltTwo)
                 let newArr=girls.time
                 const firstArr=newArr.slice(0,n)
                 firstArr.push(time)
-                const secArr= newArr.slice(n,(girls.length-1))
+                const secArr= newArr.slice(n,(girls.time.length))
                 let third= firstArr.concat(secArr)
 
                 const updateGirlScore= doc(firestore, "topScores", "topTimes");
@@ -66,8 +66,9 @@ const felt= docRem.data()
                 await updateDoc(updateNameStat, {
                 user: thirdFelt
                 });
-                return document.querySelector('.hidden').style.display='block'
-            }else{
+                 document.querySelector('.hidden').style.display='block'
+                return e.target.disabled=true
+            }else if(n===(girls.time.length-1)){
                     const loliRef = doc(firestore, "topScores", "topTimes");
                     let newArr=girls.time
                     newArr.push(time)
@@ -80,6 +81,7 @@ const felt= docRem.data()
                     await updateDoc(userRef, {
                         user: feltArr
                         });
+                        e.target.disabled=true
                  return document.querySelector('.hidden').style.display = 'block'
             }
         }
@@ -89,12 +91,12 @@ const felt= docRem.data()
                     let feltArr=felt.user
                     const newFelt= feltArr.slice(0,n)
                     newFelt.push(userInput)
-                    const feltTwo= feltArr.slice(n,(feltArr.length-1))
+                    const feltTwo= feltArr.slice(n,(felt.user.length-1))
                     let thirdFelt= newFelt.concat(feltTwo)
                     let newArr=girls.time
                     const firstArr=newArr.slice(0,n)
                     firstArr.push(time)
-                    const secArr= newArr.slice(n,(girls.length-1))
+                    const secArr= newArr.slice(n,(girls.time.length-1))
                     let third= firstArr.concat(secArr)
     
                     const updateGirlScore= doc(firestore, "topScores", "topTimes");
@@ -106,8 +108,10 @@ const felt= docRem.data()
                     await updateDoc(updateNameStat, {
                     user: thirdFelt
                     });
+                    e.target.disabled=true
                     return document.querySelector('.hidden').style.display='block'
-    }else{
+    }else if(n===(girls.time.length-1)){
+        e.target.disabled=true
         return document.querySelector('.hidden').style.display='block'
     }
 }
